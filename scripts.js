@@ -1,23 +1,30 @@
 
-// window.onload = function () {
+window.onload = function () {
 
+  var form = document.getElementById("form")
 
-    var form = document.getElementById("form")
-
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            var search_user = document.getElementById('user_name').value;
-            
-           fetch("https://api.github.com/users/"+search_user)
-           .then((result) => result.json())
-           .then((data)=> {
-            console.log(data['location'])
-           })
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var search_user = document.getElementById('user_name').value;
+      axios.get('https://api.github.com/users/' + search_user)
+        .then(function (response) {
+          // console.log(response['data'])
+          
+          for (let keys of Object.keys(response['data']))
+            {
+              document.getElementById("properties").innerHTML+=
+              `<input type="checkbox" id=${keys} name="${keys}">
+              <label for="${keys}">${keys}</label>
+              <br>`
+            }
+        })
+        .catch(function (error) {
+          console.log(error);
         });
-    } else {
-        console.error('Form element not found');
-    }
+    })
+  }
 
-// }
+
+}
+
