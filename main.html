@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <p>Using GITHUB api</p>
+    <h1 id="title" class="title">Using GITHUB api</h1>
     <form id="form">
-        <input id = 'user_name' type="text" placeholder="username">
-        <button id ="submit" type="submit">submit</button>
+        <input id='user_name' type="text" placeholder="username">
+        <button id="submit" type="submit">submit</button>
     </form>
-    <div id = 'properties'>
+    <div id='properties'>
 
     </div>
-    <button id="saveButton">Save</button>
+    <div id = "savbut">
+        <button id="saveButton">Save</button>
+    </div>
+    <div id="data">
+        
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts.js"></script>
 </body>
+
 </html>

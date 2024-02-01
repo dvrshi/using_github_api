@@ -13,21 +13,31 @@ window.onload = function () {
           document.getElementById("properties").innerHTML = '';
           for (let keys of Object.keys(response['data'])) {
             document.getElementById("properties").innerHTML +=
-              `<input type="checkbox" id=${keys} name="${keys}">
-                <label for="${keys}">${keys}</label>
-                <br>`;
+              `<div id = keys>
+              <input type="checkbox" name="${keys}">
+                <label for="${keys}" >${keys}</label>
+                
+                </div>
+                `;
           }
           githubUserData = response['data'];
-          return githubUserData; // Return the data to be used in the next then block
+          return githubUserData; 
         })
         .then(function (githubUserData) {
           var saveButton = document.getElementById("saveButton")
 
           saveButton.addEventListener('click', function () {
             var checkboxes = document.querySelectorAll('input[type=checkbox]');
+            var datas = document.getElementById('data')
+            datas.innerHTML='';
             checkboxes.forEach(function (checkbox) {
               if (checkbox.checked) {
-                console.log(githubUserData[checkbox.id]);
+                // console.log(githubUserData[checkbox.name]);
+                var textp = document.createElement('p');
+                textp.setAttribute("id","datapoints");
+                var textnode = document.createTextNode(checkbox.name+" => "+githubUserData[checkbox.name]);
+                textp.appendChild(textnode);
+                datas.appendChild(textp);
               }
             });
           });

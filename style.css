@@ -1,0 +1,90 @@
+ html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), 
+                url("https://www.bleepstatic.com/content/hl-images/2022/04/08/GitHub___headpic.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+#title{
+    padding-top: 30px;
+    font-size: 50px;
+    color: rgb(89, 30, 173);
+    text-align: center;
+    font-family: "Sixtyfour", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" 0;
+}
+
+#form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#user_name{
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0px;
+    
+}
+
+#submit{
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: lightgray;
+    font-weight: bold;
+}
+#properties{
+    padding: 100px 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+#keys{
+    border-radius: 4px;
+    border: 0;
+    width: 200px;
+    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 20px;
+    background-color: lightgray;
+}
+
+#savbut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#saveButton{
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: lightgray;
+    font-weight: bold;
+}
+#data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px ;
+}
+#datapoints{
+    color: white;
+    font-size: 15px;
+    width: fit-content;
+    margin-top: 0;
+}
